@@ -74,7 +74,7 @@ export default function Recipe({label, url, image, ingredients, mealType}) {
         <CardContent>
           <Typography paragraph>Ingredients:</Typography>
           
-            <ul>{ingredients.map((ingredient, idx) => 
+            <ul>{ingredients?.map((ingredient, idx) => 
                   <li key={idx}>{ingredient.text}</li>)}
             </ul>
           
