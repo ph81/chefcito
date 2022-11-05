@@ -18,7 +18,6 @@ export default function Home() {
     const getData = async () => {
       const response = await fetch(url);
       const result = await response.json();
-      console.log(result.hits[0])
       setRecipes(result.hits);
     };
   
@@ -38,7 +37,7 @@ export default function Home() {
 
   return (
     <Container 
-    minHeight="100vh" maxWidth="lg">
+     maxWidth="lg">
       <Box display="flex" flexDirection="column" justifyContent="center"
         alignItems="center">
       <h1>Chefcito</h1>
@@ -56,7 +55,8 @@ export default function Home() {
       </Box>
      
       <Grid container spacing={3} alignItems="stretch">
-        {recipes?.map((recipe, idx) => (
+        {recipes &&
+          recipes?.map((recipe, idx) => (
             <Grid item xs={12} sm={4} key={idx}>
             <Recipe
               key={recipe.recipe.calories}
