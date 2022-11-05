@@ -52,7 +52,7 @@ export default function Recipe({label, url, image, ingredients, mealType}) {
         <Typography variant="body2" color="text.secondary">
           Meal type: {mealType}
         </Typography>
-        <Link href={url}>Full Recipe</Link>
+        <Link href={url ?? ''}>Full Recipe</Link>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
