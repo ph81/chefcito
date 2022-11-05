@@ -56,8 +56,7 @@ export default function Home() {
       </Box>
      
       <Grid container spacing={3} alignItems="stretch">
-        {recipes !== [] &&
-          recipes.map((recipe, idx) => (
+        {recipes?.map((recipe, idx) => (
             <Grid item xs={12} sm={4} key={idx}>
             <Recipe
               key={recipe.recipe.calories}
