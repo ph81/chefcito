@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { styled } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -19,7 +20,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Recipe({label, image, ingredients, mealType}) {
+export default function Recipe({label, url, image, ingredients, mealType}) {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -51,6 +52,7 @@ export default function Recipe({label, image, ingredients, mealType}) {
         <Typography variant="body2" color="text.secondary">
           Meal type: {mealType}
         </Typography>
+        <Link href={url}>Full Recipe</Link>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
