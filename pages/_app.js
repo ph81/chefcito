@@ -20,7 +20,7 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>Chefcito</title>
+        <title>Chefcito 👩‍🍳</title>
         <meta name="description" content="Chefcito app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
