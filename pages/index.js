@@ -40,7 +40,7 @@ export default function Home() {
      maxWidth="lg">
       <Box display="flex" flexDirection="column" justifyContent="center"
         alignItems="center">
-      <h1>Chefcito</h1>
+      <h1>Chefcito👩‍🍳</h1>
       <FormControl spacing={2}>
         <Input
           type="text"
